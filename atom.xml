@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://paulsweet.github.io/</id>
     <title>Wasteland? Open up!</title>
-    <updated>2021-06-28T15:41:57.078Z</updated>
+    <updated>2021-06-28T15:50:01.281Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://paulsweet.github.io/"/>
     <link rel="self" href="https://paulsweet.github.io/atom.xml"/>
@@ -10,4 +10,34 @@
     <logo>https://paulsweet.github.io/images/avatar.png</logo>
     <icon>https://paulsweet.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Wasteland? Open up!</rights>
+    <entry>
+        <title type="html"><![CDATA[python多进程]]></title>
+        <id>https://paulsweet.github.io/post/python-duo-jin-cheng/</id>
+        <link href="https://paulsweet.github.io/post/python-duo-jin-cheng/">
+        </link>
+        <updated>2021-06-28T15:46:48.000Z</updated>
+        <content type="html"><![CDATA[<h5 id="进程使用">进程使用</h5>
+<p>分三步：</p>
+<pre><code class="language-python"># step1 导入多进程模块
+import multiprocessing
+# step2 方法任务创建多进程实例
+proc1 = multiprocessing.Process(target=sing,args=(3,))
+proc2 = multiprocessing.Process(target=dance,args=(3,))
+
+proc1.start()
+proc2.start()
+
+</code></pre>
+<h5 id="主进程和子进程">主进程和子进程</h5>
+<p>os.getpid()和os.getppid()来获取父进程和子进程的进程编号</p>
+<p>主进程是指main方法代码块，子进程指的是在main方法里创建的每个进程任务，</p>
+<p>子进程的父进程就是主进程</p>
+<h5 id="进程的注意点">进程的注意点</h5>
+<ul>
+<li>主进程会等待所有的子进程执行结束再退出</li>
+<li>守护主进程：主进程结束后子进程代码会自动随主进程结束，后续代码不会执行</li>
+<li>守护进程的目的是主进程不再等待子进程结束后再执行</li>
+</ul>
+]]></content>
+    </entry>
 </feed>

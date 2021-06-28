@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | Wasteland? Open up!</title>
+<title>python多进程 | Wasteland? Open up!</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,13 @@
 
 
 
-    <meta name="description" content="How you live your life is your business.">
+    <meta name="description" content="进程使用
+分三步：
+# step1 导入多进程模块
+import multiprocessing
+# step2 方法任务创建多进程实例
+proc1 = multiprocessing.Process(target=sing,args=(3..." />
+    <meta name="keywords" content="python,多进程" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,35 +94,53 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://paulsweet.github.io/post/hello-gridea/">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+          <div class="post-detail">
+            <h2 class="post-title">python多进程</h2>
+            <div class="post-date">2021-06-28</div>
+            
+            <div class="post-content" v-pre>
+              <h5 id="进程使用">进程使用</h5>
+<p>分三步：</p>
+<pre><code class="language-python"># step1 导入多进程模块
+import multiprocessing
+# step2 方法任务创建多进程实例
+proc1 = multiprocessing.Process(target=sing,args=(3,))
+proc2 = multiprocessing.Process(target=dance,args=(3,))
 
-                </div>
+proc1.start()
+proc2.start()
+
+</code></pre>
+<h5 id="主进程和子进程">主进程和子进程</h5>
+<p>os.getpid()和os.getppid()来获取父进程和子进程的进程编号</p>
+<p>主进程是指main方法代码块，子进程指的是在main方法里创建的每个进程任务，</p>
+<p>子进程的父进程就是主进程</p>
+<h5 id="进程的注意点">进程的注意点</h5>
+<ul>
+<li>主进程会等待所有的子进程执行结束再退出</li>
+<li>守护主进程：主进程结束后子进程代码会自动随主进程结束，后续代码不会执行</li>
+<li>守护进程的目的是主进程不再等待子进程结束后再执行</li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://paulsweet.github.io/tag/hbgtmMEsJ/" class="tag">
+                    python
+                  </a>
+                
+                  <a href="https://paulsweet.github.io/tag/u56lTiRIZT/" class="tag">
+                    多进程
+                  </a>
+                
               </div>
-              
-                <a class="right" href="https://paulsweet.github.io/post/hello-gridea/">
-                  <div class="feature-container" style="background-image: url('https://paulsweet.github.io//post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+            
+
+          </div>
 
         </div>
       </div>
